@@ -27,9 +27,10 @@ document.addEventListener('DOMContentLoaded', function () {
         //This will give all divs the classname of 'oldsquare'.
         squareContainer.className = 'oldsquare';
         //This will give all divs the id of 'oldsquare'.
+        //Classes can not be numbers so use id to make attribute id a number.
         squareContainer.id = oldSquare;
-        console.log(oldSquare);
-        console.log(oldSquareArray);
+        //console.log(oldSquare);
+        //console.log(oldSquareArray);
 
         //Actions that happen when using mouse.
         squareContainer.addEventListener('click', changeColorsOfBox)
