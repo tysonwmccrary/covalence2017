@@ -3,6 +3,7 @@ var boxColors = ['yellow', 'orange', 'red', 'blue', 'green', 'purple'];
 
 //This is the eventListner for the full document.
 document.addEventListener('DOMContentLoaded', function () {
+    //Create button and add click function.
     var btn = document.createElement('button');
     btn.innerText = 'Click to Add Square';
     btn.addEventListener('click', change);
@@ -16,9 +17,9 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
     function change() {
-        //Find all classname elements with attribute 'oldsquare' and set as a variable.
+        //Find all elements with class attribute 'oldsquare' and set as a variable.
         //This will find the elements and place the order as an array.
-        //This oldSquare is consider a number due to the length of the array.
+        //This variable is consider a number due to the length of the array.
         var oldSquare = document.getElementsByClassName('oldsquare').length;
         var oldSquareArray = document.getElementsByClassName('oldsquare');
         //This is the div for each square that is made.
