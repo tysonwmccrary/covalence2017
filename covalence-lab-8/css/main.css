@@ -1,0 +1,28 @@
+#canvas {
+    width: 600px;
+    height: 600px;
+    background-color: lightgray;
+    position: relative;
+    overflow: hidden;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+#detail-pane {
+    display: inline-block;
+    width: 300px;
+    margin: 0 30px;
+    vertical-align: top;
+}
+
+.shape {
+    cursor: pointer;
+    position: absolute;
+}
+
+.circle {
+    background-color: purple;
+    border-radius: 50px;
+    
+
+}
