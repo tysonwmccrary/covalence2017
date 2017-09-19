@@ -20,9 +20,22 @@
     position: absolute;
 }
 
+.rectangle {
+    background-color: green;
+}
+
+.square {
+    background-color: red;
+}
+
 .circle {
     background-color: purple;
-    border-radius: 50px;
-    
+    border-radius: 50%;
+}
 
+.triangle {
+    border-width: 0;
+    border-color: transparent;
+    border-bottom-color: yellow;
+    border-style: solid;
 }

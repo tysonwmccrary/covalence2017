@@ -1,50 +1,54 @@
-var names = ['Bishop', 'GQ', 'Steal', 'Raheem', 'Blizzard'];
+//Create Arrays of Names, Places and Weapons.
 
-var places = ['Harlem', 'Bronx', 'Manhattan', 'Queens', 'Staton Island', 'Brooklyn', 'Chattanooga', 'Atlanta',
+var listNames = ['Bishop', 'GQ', 'Steal', 'Raheem', 'Blizzard'];
+
+var listPlaces = ['Harlem', 'Bronx', 'Manhattan', 'Queens', 'Staton Island', 'Brooklyn', 'Chattanooga', 'Atlanta',
     'Nashville', 'Greensboro'];
 
-var weapons = ['baseball bat', 'rake', 'liquid sword', 'rock', 'hammer', 'tire iron', 'bare hands', 'knife', 'tennis racket',
+var listWeapons = ['baseball bat', 'rake', 'liquid sword', 'rock', 'hammer', 'tire iron', 'bare hands', 'knife', 'tennis racket',
     'hockey stick', 'stapler', 'exstension cord', 'frying pan', 'plastic bag', 'razor blade', 'high heel shoe', 'sunglasses',
     'shotgun', 'ice pick', 'mop'];
 
+//Call eventlistener for the document, first because script is in the head of html.
 document.addEventListener('DOMContentLoaded', function () {
 
-
-    function loopAll() {
-
-        for (var j = 0; j <= 10; j++) {
-            h3.innerText = ('Accusation ' + j + ' ' + 'I believe ' + names[j] + ' ' + 'did it!!! ');
-
-            function loopNames() {
-                for (var i = 0; i < names.length; i++) {
-                    var h3 = document.createElement('h3');
-                    h3.inner = names[i];
-                    var who = names[i];
-                    h3.appendChild(who);
-                }
-            }
-            //loopNames();
-        }
-
-        // function loopPlaces() {
-        //     for (var i = 0; i < places.length; i++) {
-        //         h3.innerHTML = places[i];
-        //         var where = places[i];
-        //         h3.appendChild(where);
-        //     }
-        // }
-
-        // function loopWeapons() {
-        //     for (var i = 0; i < weapons.length; i++) {
-        //         h3.innerHTML = weapons[i];
-        //         var item = weapons[i];
-        //         h3.appendChild(item);
-        //     }
-        // }
+    //Loop through all arrays 100 times and place into header.
+    for (var i = 0; i < 100; i++) {
+        var h3 = document.createElement('h3');
+        h3.innerText = 'Accusation ' + (i + 1);
+        //Add click function to alert Accusations looping through arrays randomly.
+        h3.addEventListener('click', function () {
+            var names = listNames[this % listNames.length];
+            var names2 = listNames[this % listNames.length];
+            var places = listPlaces[this % listPlaces.length];
+            var weapons = listWeapons[this % listWeapons.length];
+            alert('Accusation ' + (this + 1) + ': I believe ' + names + ', used a ' + weapons + ' hurt ' + names2 + ' in ' + places + '.');
+        }.bind(i));
         document.body.appendChild(h3);
     }
 
-    loopAll();
-});
+})
+
+
+//My Javascript that does something different with the arrays.
+//     function loopAll() {
+
+//         for (var i = 1; i <= 10; i++) {
+//             var h3 = document.createElement('h3');
+
+//             for (var j = 0; j < listNames.length; j++) {
+//                 var myNames = (listNames[j]);
+//                 var newName = document.createTextNode(myNames);
+//                 h3.appendChild(newName);
+//                 if (j < listNames.length) {
+//                     h3.innerText = ('Accusation ' + i + ' ' + listNames[j]);
+//                 }
+//             }
+//             document.body.appendChild(h3);
+//         }
+//     }
+//     loopAll();
+// })
+
 
 

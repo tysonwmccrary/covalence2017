@@ -1,0 +1,48 @@
+@dimension: 600px;
+@canvas-bg: lightgray;
+@rectangle-color: green;
+@square-color: red;
+@circle-color: orange;
+@triangle-color: yellow;
+
+#canvas {
+    width: @dimension;
+    height: @dimension;
+    background-color: @canvas-bg;
+    position: relative;
+    overflow: hidden;
+    display: inline-block;
+    vertical-align: middle;
+
+    .shape {
+        cursor: pointer;
+        position: absolute;
+
+        &.rectangle {
+            background-color: @rectangle-color;
+        }
+
+        &.square {
+            background-color: @square-color;
+        }
+
+        &.circle {
+            background-color: @circle-color;
+            border-radius: 50%;
+        }
+
+        &.triangle {
+            border-width: 0;
+            border-color: transparent;
+            border-bottom-color: @triangle-color;
+            border-style: solid;
+        }
+    }
+}
+
+#detail-pane {
+    display: inline-block;
+    width: 300px;
+    margin: 0 30px;
+    vertical-align: top;
+}

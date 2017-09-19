@@ -11,7 +11,7 @@ function loop() {
         }
     }
 }
-
+loop();
 
 
 
