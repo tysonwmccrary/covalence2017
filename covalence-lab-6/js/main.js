@@ -30,25 +30,4 @@ document.addEventListener('DOMContentLoaded', function () {
 })
 
 
-//My Javascript that does something different with the arrays.
-//     function loopAll() {
-
-//         for (var i = 1; i <= 10; i++) {
-//             var h3 = document.createElement('h3');
-
-//             for (var j = 0; j < listNames.length; j++) {
-//                 var myNames = (listNames[j]);
-//                 var newName = document.createTextNode(myNames);
-//                 h3.appendChild(newName);
-//                 if (j < listNames.length) {
-//                     h3.innerText = ('Accusation ' + i + ' ' + listNames[j]);
-//                 }
-//             }
-//             document.body.appendChild(h3);
-//         }
-//     }
-//     loopAll();
-// })
-
-
 
